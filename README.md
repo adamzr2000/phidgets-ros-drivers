@@ -2,11 +2,11 @@
 
 ## What is it?
 
-This repository contains files for basic device management of the PhidgetSpatial Precision 3/3/3 with ROS.
+This repository contains files for basic device management of the [PhidgetSpatial Precision 3/3/3](https://www.phidgets.com/?prodid=1205&srsltid=AfmBOoq5wnBJ4TBEj7GeISFI8TD6qQ9OCh0vuECc95HaaD-B1GDWS0ut) with ROS.
 
-The data captured by the PhidgetSpatial Precision 3/3/3 is published on the `/imu` ROS topic.
+The data captured by the PhidgetSpatial Precision 3/3/3 is published on the `/imu/data_raw` ROS topic.
 
-For further information, refer to the documentation available at: [phidgets ros package](https://github.com/ros-drivers/phidgets_drivers/tree/noetic)
+For further information, refer to the documentation available at: [phidgets ros package](https://github.com/ros-drivers/phidgets_drivers/tree/noetic/phidgets_spatial)
 
 
 ## What does this container do?
@@ -59,7 +59,3 @@ docker ps
 ```
 
 In the output you should be able to see the `phidgets-imu` container up and running.
-
-
-[ROS Topics info](https://github.com/ros-drivers/phidgets_drivers/tree/noetic/phidgets_spatial)
-
