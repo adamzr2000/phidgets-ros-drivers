@@ -1,5 +1,5 @@
 # Specify the ROS distribution as a build argument
-ARG ROS_DISTRO=melodic
+ARG ROS_DISTRO=noetic
  
 # Use an official ROS base image 
 FROM ros:${ROS_DISTRO}
@@ -26,6 +26,8 @@ RUN apt-get update && apt-get install -y \
     lsof \
     libusb-1.0-0 \
     libusb-1.0-0-dev \
+    ros-$ROS_DISTRO-imu-transformer \
+    ros-$ROS_DISTRO-imu-filter-madgwick \
     && rm -rf /var/lib/apt/lists/*
 
 
@@ -58,4 +60,4 @@ RUN chmod +755 wait-for-ros-nodes.sh
 
 USER phidgets-imu
 
-# CMD "./wait-for-ros-nodes.sh"
+CMD "./wait-for-ros-nodes.sh"

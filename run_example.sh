@@ -4,6 +4,7 @@
 ros_master_uri="http://localhost:11311"
 ros_ip="127.0.0.1"
 container_image="phidgets-imu:latest"
+
 # Parse arguments
 while [[ $# -gt 0 ]]; do
     key="$1"
@@ -57,6 +58,9 @@ docker run \
     --name phidgets-imu \
     --rm \
     --net host \
+    -v $host_catkin_ws_dir:/home/phidgets-imu/catkin_ws/src \
     -e ROS_MASTER_URI="$ros_master_uri" \
     -e ROS_IP="$ros_ip" \
+    -e FRAME_ID="phidgets_imu_link" \
+    -e FIXED_FRAME="base" \
     $container_image

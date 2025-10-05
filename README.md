@@ -6,8 +6,9 @@ This repository contains files for basic device management of the [PhidgetSpatia
 
 The data captured by the PhidgetSpatial Precision 3/3/3 is published on the `/imu/data_raw` ROS topic.
 
-For further information, refer to the documentation available at: [phidgets ros package](https://github.com/ros-drivers/phidgets_drivers/tree/noetic/phidgets_spatial)
-
+For further information, refer to the documentation available at: 
+- [phidgets ros package](https://wiki.ros.org/phidgets_imu)
+- [phidgets source code](https://github.com/ros-drivers/phidgets_drivers/tree/noetic/phidgets_spatial)
 
 ## What does this container do?
 
